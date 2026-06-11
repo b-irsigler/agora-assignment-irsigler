@@ -1,11 +1,15 @@
-# Stakeholder-Specific Agora Publication Retriever and Summarizer
+# Agora Publication Explorer
 
-N = 2
-embedding-model = text-embedding-3-small
-chat-model = gpt-4o
+## Parameters
+* N = 2
+* embedding-model = text-embedding-3-small
+* chat-model = gpt-4o
 
 ## tl;dr
-This simple app lets you query in natural language about Agora's N most influential publications. The top related publications can then be summarized specifically to the type of stakeholder the user has selected.
+This app is meant to make Agora's publications more accessible. It works in in a two-step manner. First, it lets you query in natural language about Agora's N most influential publications to retrieve related text parts. Then, the top related parts can be summarized specifically to the type of stakeholder the user has selected upfront.
+
+## For the reviewers
+The app is a single file by design. To run the app, checkout the repository and double click the index.html. This should open the app in the browser. The first screen will ask you for credentials. Use the ones you have send me via email. Now follow the guidance in the app.
 
 ## Workflow
 There are five screens appearing in this order:
@@ -34,7 +38,7 @@ There is a preprocessing.py script which directly manipulates the index.html.
 The script preprocessing.py will chunk all available PDFs in ./original-publications considering only text, vectorize them using the embedding model defined above, and store them with proper metadata in the index.html.
 
 ### Chunking strategy
-For now, we use a fixed-size approach, i.e, 200 tokens with 30 tokens overlap. Smaller chunks improve retrieval precision for sparse keyword mentions.
+For now, we use a fixed-size approach, i.e, 200 tokens with 30 tokens overlap. Smaller chunks improve retrieval precision for sparse keyword mentions. Larger chunks add more context.
 
 ### How to run it
 Create a venv: `python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt`
