@@ -27,8 +27,8 @@ from openai import OpenAI
 PUBLICATIONS_DIR = Path("./original-publications")
 INDEX_HTML_PATH = Path("./index.html")
 EMBEDDING_MODEL = "text-embedding-3-small"
-CHUNK_SIZE = 500       # tokens
-CHUNK_OVERLAP = 50     # tokens
+CHUNK_SIZE = 200       # tokens
+CHUNK_OVERLAP = 30     # tokens
 BATCH_SIZE = 20        # embeddings per API call
 
 # ─── PDF Text Extraction ─────────────────────────────────────────────────────

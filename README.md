@@ -34,7 +34,7 @@ There is a preprocessing.py script which directly manipulates the index.html.
 The script preprocessing.py will chunk all available PDFs in ./original-publications considering only text, vectorize them using the embedding model defined above, and store them with proper metadata in the index.html.
 
 ### Chunking strategy
-For now, we use a fixed-size approach, i.e, 500 tokens with 50 tokens overlap.
+For now, we use a fixed-size approach, i.e, 200 tokens with 30 tokens overlap. Smaller chunks improve retrieval precision for sparse keyword mentions.
 
 ### How to run it
 Create a venv: `python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt`
