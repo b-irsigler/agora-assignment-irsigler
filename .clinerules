@@ -1,0 +1,2 @@
+# Files that should not be read or included in context by AI tools
+.env

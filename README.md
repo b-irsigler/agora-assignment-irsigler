@@ -36,6 +36,11 @@ The script preprocessing.py will chunk all available PDFs in ./original-publicat
 ### Chunking strategy
 For now, we use a fixed-size approach, i.e, 500 tokens with 50 tokens overlap.
 
+### How to run it
+Create a venv: `python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt`
+
+And run the script: `source .venv/bin/activate && set -a && source .env && set +a && python preprocessing.py`
+
 ## App
 The static site index.html will show one of the aforementioned screens depending on the internal state: 
 
