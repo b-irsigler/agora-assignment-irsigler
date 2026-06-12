@@ -16,6 +16,12 @@ The app is a single file by design. To run the app, checkout the repository and 
 2. **What risks do you see, and how would you address them?** - Especially the RAG part has to be tuned to give better results. If a product is half-baked, it might cause more harm than benefit. The could also be addressed systematically using metrics to judge the RAG's precision. Also, as AI-based parts are stochastic, you can never be 100% certain that all information is retrieved and processed correctly. I must always be stated that AI tools are meant to be helpers and don't replace your own way of researching. AI backend cost are another topic one has to think about.
 3. **Who are the key stakeholders you'd want to involve in building this out?** - Collecting data on how the different stakeholders found the tool to be useful is a great way to improve it. From Agora's side, people who are actively writing publications probably have the most valuable opinion - across topics. Feedback from policy makers, businesses, and interested citizen could perhaps be retrieved through a public announcement, for example, via Linkedin.
 
+## Use cases
+* A researcher wants to find out whether and how a certain aspect has been addressed in the Agora publications.
+* A policy maker wants to get recommendation out of the Agora publications.
+* A business seeking for investment decisions based on the Agora publications.
+* A citizen can look up facts they are interested in to find them in the Agora publications.
+
 ## Workflow
 There are five screens appearing in this order:
 * Setup: User must provide API key and base URL for an OpenAI-standard endpoint
